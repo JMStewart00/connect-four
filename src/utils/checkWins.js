@@ -8,7 +8,7 @@ export const chkWinner = (board) => {
     for (let r = 0; r <= 3; r++) {
         for (let c = 0; c < 7; c++) {
             if (chkLine(board[r][c], board[r+1][c], board[r+2][c], board[r+3][c])) {
-                return board[r][c];
+                return 1;
             }
         }
     }
@@ -17,7 +17,7 @@ export const chkWinner = (board) => {
     for (let r = 0; r <= 6; r++) {
         for (let c = 0; c <= 3; c++) {
             if (chkLine(board[r][c], board[r][c+1], board[r][c+2], board[r][c+3])) {
-                return board[r][c];
+                return 1;
             }
         }
     }
@@ -26,7 +26,7 @@ export const chkWinner = (board) => {
     for (let r = 0; r <= 3; r++) {
         for (let c = 0; c <= 3; c++) {
             if (chkLine(board[r][c], board[r+1][c+1], board[r+2][c+2], board[r+3][c+3])) {
-                return board[r][c];
+                return 1;
             }
         }
     }
@@ -35,7 +35,7 @@ export const chkWinner = (board) => {
     for (let r = 3; r <= 6; r++) {
         for (let c = 0; c <= 3; c++) {
             if (chkLine(board[r][c], board[r-1][c+1], board[r-2][c+2], board[r-3][c+3])) {
-                return board[r][c];
+                return 1;
             }
         }
     }
